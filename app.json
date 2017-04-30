@@ -1,5 +1,5 @@
 {
-  "name"            : "zhaomajiang",
+  "name"            : "www.zhaomajiang.com",
   "script"          : "app.js",
   "instances"       : 1,
   "exec_mode"       : "cluster",

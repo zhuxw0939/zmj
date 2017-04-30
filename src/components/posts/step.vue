@@ -745,7 +745,7 @@ export default {
 						console.info("保存成功-D");
 						Toast('恭喜您，提交成功，请等待审核！');
 						setTimeout(() => {
-							window.location.href="/";
+							this.$router.push({path: '/'})
 						}, 2000);
 					} else {
 						console.info("保存失败-D");

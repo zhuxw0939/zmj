@@ -100,7 +100,7 @@ export default {
 						this.MessageBox.confirm('查看该信息需要 <font style="color: #fa7600">1</font> 福利点<br>您剩余福利点数为：<font style="color: #fa7600">'+data.fees+'</font>').then(function(){
 							if(data.fees<=0){
 								// 余额不足，跳至充值页面
-								window.location.href = "/user/recharge"
+								this.$router.push('/u/myrecharge');
 							} else {
 								// 余额充足，打开某个代理信息层
 								_this.Indicator.open();
@@ -120,7 +120,8 @@ export default {
 							$(".mint-msgbox-confirm").text("充值");
 						}
 					} else if(data.status==2) {
-						window.location.href = "/user/login";
+						this.Indicator.close();
+						this.$router.push('/u/login');
 					} else {
 						this.Indicator.close();
 						console.info("返回错误");
@@ -185,7 +186,8 @@ export default {
 					this.popupVisible = true;
 				} else if(data.status==8){
 					console.info(data);
-					window.location.href="/user/login";
+					this.Indicator.close();
+					this.$router.push('/u/login');
 				} else {
 					console.info(data);
 					console.info(data.message);

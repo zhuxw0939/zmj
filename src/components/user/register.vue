@@ -100,7 +100,7 @@ export default {
 						message: '注册成功，即将自动登录',
 						iconClass: 'icon icon-success'
 					});
-					this.ajaxLoginPost();
+					this.ajaxLogin();
 				} else {
 					this.Toast(data.message);
 				}
@@ -108,21 +108,37 @@ export default {
 				console.info("返回失败："+error);
 			});
 		},
-		ajaxLoginPost() {
+		ajaxLogin() {
+			// 和登录页面一样的代码
 			this.$http.post('/user/loginPost', {
 				phone: this.phone,
 				password: this.password
 			}).then(function(data){
 				data = data.body;
+				console.info(data);
 				if(data.status==0){
-					setTimeout(function(){
-						window.location.href="/";
-					}, 1000);
+					data = data.data;
+					this.Toast({
+						message: '登录成功',
+						iconClass: 'icon icon-success'
+					});
+
+					// 写入用户登录信息
+					this.$global.user = data;
+
+					// 返回登录前页面
+					if(!this.$route.query.back_url) {
+						this.$router.push({path: '/u/my'})
+					} else {
+						this.$router.push({path: this.$route.query.back_url})
+					}
 				} else {
+					console.warn("登录失败！");
 					this.Toast(data.message);
 				}
 			}, function(error){
-				console.info(error);
+				console.warn("请求失败！");
+				console.error(error);
 			});
 		}
 	}

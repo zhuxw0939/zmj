@@ -158,8 +158,8 @@ export default {
 						message: '充值成功',
 						iconClass: 'icon icon-success'
 					});
-					setTimeout(function(){
-						window.location.href="/user/myindex";
+					setTimeout(() => {
+						this.$router.push({path: '/u/my'})
 					}, 2000);
 				} else {
 					this.Toast(data.message);
