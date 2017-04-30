@@ -1,0 +1,105 @@
+.login_top {
+	position: relative;
+}
+.login_top img._bg {
+	display: block;
+	width: 100%;
+	margin-top: -0.8rem;
+}
+.login_top ._logo {
+	width: 100%;
+	position: absolute;
+	bottom: 3.5rem;
+	left: 0;
+	text-align: center;
+}
+.login_top ._logo img {
+	width: 2.2rem;
+}
+.login_top ._tabs {
+	width: 100%;
+	height: 1.2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.login_top ._tabs a {
+	line-height: 1.2rem;
+	display: block;
+	width: 50%;
+	float: left;
+	color: #a8a9b0;
+	text-align: center;
+	font-size: 0.4rem;
+}
+.login_top ._tabs_one a {
+	width: 100%;
+}
+.login_top ._tabs a.current {
+	color: #fff;
+}
+.login_top ._closed {
+	width: 1.1rem;
+	position: absolute;
+	top: 1.2rem;
+	left: 0.4rem;
+}
+
+
+
+
+.reg_box {
+	padding: 0.4rem 0.7rem;
+}
+
+.reg_box .input_box {
+	position: relative;
+}
+.reg_box .input_box input {
+	border: 0;
+	border-bottom:1px solid #ddd;
+	position:relative;
+	margin-bottom:.3rem;
+	width:7.6rem;
+	padding: 0.35rem 0.5rem;
+	font-size: 0.4rem;
+}
+.reg_box .input_box .send_code {
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height:.5rem;
+	padding: 0.3rem 0.5rem;
+	color:#2088c4;
+}
+.reg_box .input_box .send_code:before {
+	content: "";
+	border-left: 1px solid #ddd;
+	width: 1px;
+	height: 20px;
+	position: relative;
+	right: 0.5rem;
+}
+
+.submitdiv {
+	padding: 0.5rem 0 0.3rem;
+	text-align: center;
+}
+.submitdiv a {
+	display: block;
+	background: #fc8048;
+	color: #fff;
+	font-size: 0.4rem;
+	border-radius: 0.1rem;
+	width: 100%;
+	line-height: 1.2rem;
+	text-align: center;
+}
+.others {
+	text-align: center;
+}
+.others a {
+	display: inline-block;
+	padding: 0.1rem 0.3rem;
+	color: #919191;
+}

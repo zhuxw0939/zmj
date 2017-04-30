@@ -1,0 +1,292 @@
+body.my_index {
+	background: #f6f6f6;
+}
+body.my_index footer {
+	height: 0;
+}
+
+.myindex_top {
+	display: flex;
+	padding: 0.6rem;
+	border-bottom: 1px solid #e9e9e9;
+}
+.item_img {
+	width: 1.6rem;
+	margin-right: 0.3rem;
+}
+.item_img img {
+	display: block;
+	width: 1.6rem;
+	border-radius: 100%;
+}
+.item_txt p._title {
+	color: #666;
+	margin-top: 0.2rem;
+	line-height: 0.8rem;
+	font-size: 0.4rem;
+}
+.item_txt p._info {
+	color: #bdbdbd;
+	font-size: 0.3rem;
+}
+
+.menui_logout {
+}
+.menui_logout a {
+	display: block;
+	width: 100%;
+	line-height: 1.4rem;
+	color: #fc8048;
+	text-align: center;
+	font-size: 0.4rem;
+}
+
+.myindex_top_nologin {
+	padding: 1.6rem 0;
+	text-align: center;
+}
+.myindex_top_nologin p {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #fc8048;
+	border-radius: 1rem;
+	padding: 0 1rem;
+	margin: 0.2rem 0;
+}
+.myindex_top_nologin p a {
+	color: #fc8048;
+	display: inline-block;
+	padding: 0 0.05rem;
+	vertical-align: middle;
+	line-height: 1rem;
+	font-size: 0.4rem;
+}
+.myindex_top_nologin p i {
+	color: #fc8048;
+	font-style: normal;
+}
+.myindex_top_nologin .info {
+	padding-top: 0.2rem;
+	color: #b3b3b3;
+}
+
+.my_table {
+	padding: 0.3rem;
+}
+.my_table table {
+	width: 100%;
+}
+.my_table tr td {
+	text-align: center;
+	padding: 0.2rem;
+	border-bottom: 1px solid #eee;
+	font-size: 0.3rem;
+}
+.send_zm {
+	text-align: center;
+	padding: 0.3rem 0 0;
+}
+.send_zm a {
+	display: inline-block;
+	border: 1px solid #ddd;
+	padding: 0.3rem 2rem;
+	color: #999;
+}
+
+
+
+
+
+/*充值*/
+.re_top {
+	padding: 1rem 1rem 0.4rem;
+	border-bottom: 1px solid #e9e9e9;
+	text-align: left;
+	font-size: 0.3rem;
+	color: #919191;
+}
+.re_top h4 {
+	font-size: 0.5rem;
+	color: #303030;
+	line-height: 0.8rem;
+}
+.re_list ul {
+	padding: 1rem 0;
+}
+.re_list ul li {
+	width: 2.6rem;
+	height: 2.5rem;
+	margin-left: 0.5rem;
+	margin-bottom: 0.5rem;
+	float: left;
+	text-align: center;
+	border: 1px solid #e3e3e3;
+	border-radius: 0.1rem;
+	position: relative;
+}
+.re_list ul li p._title {
+	padding-top: 0.2rem;
+	line-height: 1.3rem;
+	font-size: 0.5rem;
+	color: #fc8048;
+}
+.re_list ul li p._info {
+	font-size: 0.35rem;
+	color: #7a7a7a;
+}
+.re_list ul li img {
+	display: none;
+}
+.re_list ul li.current {
+	border: 1px solid #3fd589;
+}
+.re_list ul li.current img {
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.re_submit {
+	padding: 0 0.5rem;
+}
+.re_submit a {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	background: #fc8048;
+	border-radius: 0.1rem;
+	line-height: 1.2rem;
+}
+.re_fx {
+	padding: 0.6rem 0.5rem;
+}
+.re_fx a {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #61676f;
+	border: 1px solid #fc8048;
+	border-radius: 0.1rem;
+	line-height: 1.2rem;
+}
+.re_fxtxt {
+	padding: 0.2rem 0.5rem;
+	font-size: 0.3rem;
+	color: #7a7a7a;
+}
+
+
+.rewater_top {
+	padding: 0.7rem 0.5rem 0.4rem;
+	border-bottom: 1px solid #e9e9e9;
+	text-align: left;
+	font-size: 0.3rem;
+	color: #919191;
+}
+.rewater_top h4 {
+	font-size: 0.5rem;
+	color: #303030;
+	line-height: 0.8rem;
+}
+.rewater_list {
+}
+.rewater_list ul {
+}
+.rewater_list ul li {
+	padding: 0.3rem 0;
+	line-height: 0.8rem;
+	border-bottom: 1px solid #e9e9e9;
+}
+.rewater_list ul li p {
+	display: inline-block;
+	vertical-align: middle;
+}
+.rewater_list ul li p._time {
+	border-right: 1px solid #e9e9e9;
+	width: 3rem;
+	color: #999;
+	font-size: 0.35rem;
+	text-indent: 0.7rem;
+	height: 0.8rem;
+	overflow: hidden;
+}
+.rewater_list ul li p._title {
+	text-indent: 0.3rem;
+	font-size: 0.35rem;
+	width: 5rem;
+	color: #333;
+}
+.rewater_list ul li p._fees {
+	font-size: 0.35rem;
+	text-indent: 0.4rem;
+	color: #fc8048;
+}
+
+
+
+
+.picker_fx_title {
+	border-bottom: 1px solid #fc8048;
+	line-height: 1.4rem;
+	padding: 0 0.5rem;
+	position: relative;
+}
+.picker_fx_title .goright {
+	right: 0.5rem;
+}
+.fx_txt {
+	padding: 0.5rem 0.5rem;
+}
+.fx_txt h5 {
+	font-size: 0.4rem;
+	color: #333;
+	line-height: 0.8rem;
+}
+.fx_txt p {
+	font-size: 0.35rem;
+	color: #666;
+	line-height: 0.6rem;
+}
+.fx_btns {
+	padding: 0 0 0.8rem;
+	text-align: center;
+}
+.fx_btns a {
+	display: inline-block;
+	width: 25%;
+	vertical-align: middle;
+	text-align: center;
+	margin-left: -0.2rem;
+}
+.fx_btns a img {
+	width: 1.5rem;
+}
+.fx_txt ul {
+	padding: 0 0.4rem;
+}
+.fx_txt ul li {
+	font-size: 0.35rem;
+	color: #666;
+	line-height: 0.6rem;
+	list-style-type: decimal;
+}
+.fx_copy {
+	margin: 0 0.5rem;
+	padding: 0.5rem;
+	background: #fff6d9;
+	border-radius: 0.1rem;
+	word-break: break-all;
+}
+.fx_btn {
+	padding: 0.5rem;
+}
+.fx_btn a {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	background: #fc8048;
+	border-radius: 0.1rem;
+	line-height: 1.2rem;
+}

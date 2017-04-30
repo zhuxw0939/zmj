@@ -1,0 +1,126 @@
+@import url(wrapper.css);
+
+
+
+.search {
+	padding:25px 0 25px 25px;
+}
+.search label {
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 12px;
+}
+.search label.term select {
+	width: 224px
+}
+.search label.classes select{
+	width: 124px;
+}
+.search label.level select{
+	width: 124px;
+}
+.search label.stdate input {
+	width: 100px;
+}
+.search label.datesep {
+	line-height: 37px;
+}
+.search label.endate input {
+	width: 100px;
+}
+.search label.exam input {
+	width: 240px;
+}
+.search label.searbtn input {
+}
+
+
+
+
+
+
+
+
+
+.examlist_box {
+	padding: 0 25px 0;
+
+}
+ul.examlist {
+
+}
+ul.examlist li {
+	background: rgba(0, 0, 0, 0) linear-gradient(0deg, #f2f2f2, #fff);
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 1px 0 #dfdfdf;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding: 20px;
+	position: relative;
+}
+ul.examlist li p._title {
+	font-size: 20px;
+    color: #666;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 600;	
+}
+ul.examlist li p._title i.level {
+	padding: 2px;
+	font-size: 13px;
+	margin-left: 5px;
+}
+ul.examlist li p._title font {
+	display: inline-block;
+	color: #ff5400;
+    font-size: 13px;
+    font-weight: normal;
+    margin-left: 20px;
+}
+ul.examlist li p._title font._blue {
+	color: #00b4fb;
+}
+ul.examlist li p._title font i.iconfont {
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+ul.examlist li p._info {
+	color: #888;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+ul.examlist li p._btncons {
+	position: absolute;
+    height: 40px;
+    line-height: 40px;
+    width: 230px;
+	top: 50%;
+	right: 40px;
+	margin-top: -20px;
+}
+ul.examlist li p._btncons a {
+	display: inline-block;
+	vertical-align: middle;
+	background: #00b4fb;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+ul.examlist li p._btncons a._btn1 {
+	width: 100%;
+}
+ul.examlist li p._btncons a._btn2,
+ul.examlist li p._btncons a._btn3 {
+	width: 47%;
+}
+ul.examlist li p._btncons a._btn2 {
+	margin-right: 6%;
+}
+ul.examlist li p._btncons a._btn3 {
+	margin-left: -5px;
+}
+

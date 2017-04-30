@@ -1,0 +1,19 @@
+
+
+<article class="wrapper" id="wrapper">
+
+    <h4>对不起，您要访问的页面不存在或已经删除！</h4>
+
+    {% if env=="development" %}
+		{% if message %}
+			<h5>{{message}}</h5>
+		{% else %}
+			<h5>{{error}}</h5>
+		{% endif %}
+		<p><a href="/">返回首页</a></p>
+    <!--<h6>{{JSON.stringify(error)}}</h6>-->
+    {% else %}
+        <p>您可以尝试 <a href="#">重新打开</a> 或者 <a href="/">返回首页</a></p>
+	{% endif %}
+
+</article>
