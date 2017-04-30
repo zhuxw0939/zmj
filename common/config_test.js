@@ -15,7 +15,7 @@ module.exports = {
 	v: "0.1.0",
 
 	// 域名
-	host: 'http://www.eliavas.net',
+	host: 'http://www.eliavas.net:6001',
 	// 端口号，必须配置
 	port: 6001,
 

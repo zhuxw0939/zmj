@@ -6,7 +6,6 @@
   "scripts": {
     "start": "NODE_ENV=production DEBUG=mydebug:* pm2 start app.json",
     "start_test": "NODE_ENV=testingenv DEBUG=mydebug:* pm2 start app.json",
-    "start_dev": "cross-env NODE_ENV=development DEBUG=mydebug:* forever start -l /home/zxw/site/m.zhaomajiang.net/.logs/forever.log -a ./app.js",
     "log": "tail -f /home/zxw/site/m.zhaomajiang.net/.logs/forever.log",
     "logall": "tail -n 2000 /home/zxw/site/m.zhaomajiang.net/.logs/forever.log",
     "linux": "cross-env NODE_ENV=production DEBUG=mydebug:* node ./app.js",

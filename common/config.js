@@ -7,11 +7,8 @@ if(process.env.NODE_ENV === 'development'){
 	// 本地开发环境
 	siteConfig = require('./config_dev');
 } else if(process.env.NODE_ENV === 'testingenv'){
-	// 测试环境：192.168.2.84
+	// 测试环境
 	siteConfig = require('./config_test');
-} else if(process.env.NODE_ENV === 'outerenv'){
-	// 外网测试：116.62.53.62
-	siteConfig = require('./config_out');
 } else {
 	// 生产环境
 	siteConfig = require('./config_prod');
