@@ -100,7 +100,7 @@ export default {
 						this.MessageBox.confirm('查看该信息需要 <font style="color: #fa7600">1</font> 福利点<br>您剩余福利点数为：<font style="color: #fa7600">'+data.fees+'</font>').then(function(){
 							if(data.fees<=0){
 								// 余额不足，跳至充值页面
-								this.$router.push('/u/myrecharge');
+								_this.$router.push('/u/myrecharge');
 							} else {
 								// 余额充足，打开某个代理信息层
 								_this.Indicator.open();

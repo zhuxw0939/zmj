@@ -43,12 +43,13 @@ exports.userMustLogout = function (req, res, next) {
  */
 exports.authUser = function (req, res, next) {
 	/** 检查该用户是否登录，并刷新cookies */
+	var ip = req.get("X-Real-IP") || req.get("X-Forwarded-For") || req.ip;
 	if(req.session.user) {
-		logger.info('已登录用户，token：', req.session.user.id);
+		logger.debug('已登录用户，token：', req.session.user.id, "， ip：", ip);
 		// 设置user信息
 		res.locals.user = req.session.user;
 	} else {
-		logger.info('未登录用户:');
+		logger.debug('未登录用户ip：', ip);
 	}
 	next();
 };

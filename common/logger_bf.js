@@ -2,25 +2,17 @@ var config = require('../common/config');
 var mydebug = require("debug")("mydebug:logger.info");
 
 var log4js = require('log4js');
-
 log4js.configure({
 	appenders: [
 		{
 			type: 'console' //控制台输出
+		},
+		{
+			type: 'file', //文件输出
+			filename: '.logs/mylogger.log', //文件输出
+			category: 'cheese'
 		}
 	]
-
-	/*
-	 appenders: [
-	 {
-	 type: 'console' //控制台输出
-	 },
-	 {
-	 type: 'file', //文件输出
-	 filename: config.logger_save, //文件输出
-	 category: 'cheese'
-	 }
-	 ]*/
 });
 
 var logger = log4js.getLogger('cheese');
@@ -29,8 +21,6 @@ logger.setLevel('DEBUG');
 
 if(config.debug){
 	logger.info = mydebug;
-} else {
-	logger.info = function(){};
 }
 
 module.exports = logger;

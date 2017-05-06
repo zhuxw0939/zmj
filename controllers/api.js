@@ -31,12 +31,14 @@ exports.getCityList = function (req, res, next) {
 /** 查询用户的ip地址，返回经纬度 */
 exports.getIpLocation = function (req, res, next) {
 	// var ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress);
-	var ip = req.ip;
+	// var ip = req.ip;
+	var ip = req.get("X-Real-IP") || req.get("X-Forwarded-For") || req.ip;
+
 
 	ip = ip.split(":");
 	ip = ip[ip.length-1];
 	logger.info("getIpLocation");
-	logger.info(ip);
+	logger.debug("查询用户的ip地址，返回经纬度 --------------->", ip);
 
 	var url = "http://api.map.baidu.com/location/ip";
 	var obj = {
@@ -46,9 +48,9 @@ exports.getIpLocation = function (req, res, next) {
 	};
 
 	servers.ajaxGet(url, obj, function(error, data){
-		logger.info("ajaxGet back+");
-		logger.info(data);
-		logger.info(typeof(data));
+		logger.debug("查询用户的ip地址【back】 <---------------", ip);
+		logger.debug(data);
+		// logger.info(typeof(data));
 		if(error){
 			res.send({
 				status: -1,
@@ -87,9 +89,9 @@ exports.readcode = function (req, res, next) {
 		appkey: "47b5cfcffad4e959"
 	};
 	servers.ajaxGet(url, obj, function(error, data){
-		logger.info("ajaxGet back+");
-		logger.info(data);
-		logger.info(typeof(data));
+		logger.debug("识别二维码 back +++++++++++");
+		logger.debug(data);
+		// logger.info(typeof(data));
 		if(error){
 			res.send({
 				status: -1,
@@ -101,7 +103,7 @@ exports.readcode = function (req, res, next) {
 			logger.info(data.result.text);
 			if(data.status==0){
 				var backUrl = data.result.text;
-				logger.warn(backUrl.indexOf("http://weixin.qq.com/r"));
+				logger.info(backUrl.indexOf("http://weixin.qq.com/r"));
 				if(backUrl.indexOf("http://weixin.qq.com/r")==0){
 					res.send({
 						status: 0,

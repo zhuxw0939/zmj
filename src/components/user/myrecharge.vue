@@ -119,10 +119,11 @@ export default {
 		clipboard.on('error', e => {
 			// console.error('Action:', e.action);
 			// console.error('Trigger:', e.trigger);
-			this.MessageBox({
-				title: "内容复制失败",
-				message: "请稍后再试，或者换个浏览器吧！"
-			});
+			alert("抱歉！您的浏览器不支持复制功能，请手动选择复制或者换个浏览器再试！");
+//			this.MessageBox({
+//				title: "内容复制失败",
+//				message: "请稍后再试，或者换个浏览器吧！"
+//			});
 		});
 	},
 	methods: {

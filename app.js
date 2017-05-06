@@ -96,7 +96,7 @@ app.use(function(req, res, next) {
 if (config.debug) {
 	// development
 	app.use(function(err, req, res, next) {
-		logger.info(err);
+		logger.debug(err);
 		if(err.status === 404){
 			res.status(err.status || 404);
 			res.render('404', {
@@ -136,6 +136,9 @@ if (config.debug) {
 
 
 
+
+
+
 // node server start
 var port = normalizePort(config.port || '3000');
 app.set('port', port);
@@ -144,7 +147,6 @@ app.set('port', port);
  * Create HTTP server.
  */
 var server = http.createServer(app);
-logger.info("server ~ listen "+port);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -179,7 +181,7 @@ function onListening() {
 	var bind = typeof addr === 'string'
 		? 'pipe ' + addr
 		: 'port ' + addr.port;
-	logger.info('Listen on provided ' + config.host + ' ' + bind);
+	logger.debug('App start success, listen on ' + config.host + ' ' + bind);
 }
 
 function normalizePort(val) {

@@ -344,6 +344,7 @@ ul.game_list li
 			padding 0.4rem 0.6rem
 			line-height 0.5rem
 			position relative
+			font-size 0.35rem
 			a
 				color #2088c4
 			i._r
@@ -376,6 +377,7 @@ ul.game_list li
 	line-height 1.5rem
 	color #bababa
 	font-size 0.3rem
+	margin-top 2.4rem
 	.mint-spinner-snake
 		display inline-block
 		vertical-align middle

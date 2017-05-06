@@ -20,7 +20,7 @@ module.exports = {
 	port: 6001,
 
 	// 是否开启debug模式，正式环境可以关闭
-	debug: true,
+	debug: false,
 	logger_level: 'DEBUG',
 	logger_save: './.logs/logger.log', // logs文件输出地址，目前没有用到
 
@@ -46,18 +46,20 @@ module.exports = {
 	sessionMaxAge: 60*60*24,
 	// cookie有效期
 	cookieMaxAge: 1000*60*60*24,
-	authCookieName: "zmj_uid",
+	authCookieName: "zmj_vid",
 	cookieDomain: "",
 
 	// 正式环境只需要配置host，默认"/dist"
 	webpackServer: {
-		open: true,
+		open: false,
 		host: '/dist'
 	},
 
 	// mock设置 为 true 时，从mock服务器取数据，为 false 时从servers取数据
 	mock: {
 		open: false,
+		user: false, // 0-市级 1-区县级 2-校级，不想mock用户时请务必设为空或false
+		apiSave: true,
 		host: "http://www.uyun.net:3300",
 		p_id: "Hkldi9aJUl",
 		v_id: "rybdiqTyUx"

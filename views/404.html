@@ -1,8 +1,25 @@
-
-
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta http-equiv="Expires" content="0" />
+<title>404 - 这个页面出错了</title>
+<meta name="keywords" content="找麻将 - 找你身边的微信麻将群" />
+<meta name="description" content="刚发现，原来我家周围有这么多打麻将的微信群！快来找找你家周围的麻将群吧！" />
+<script>document.getElementsByTagName("html")[0].style.fontSize = ((self.innerWidth<=640?self.innerWidth*0.1:64)+"px");</script>
+<style>
+*{ padding: 0; margin: 0; }
+.wrapper { font-size: 0.35rem; line-height: 0.7rem;}
+</style>
+</head>
+<body>
 <article class="wrapper" id="wrapper">
 
-    <h4>对不起，您要访问的页面不存在或已经删除！</h4>
+	<h4>对不起，您要访问的页面不存在或已经删除！    </h4>
 
     {% if env=="development" %}
 		{% if message %}
@@ -10,10 +27,12 @@
 		{% else %}
 			<h5>{{error}}</h5>
 		{% endif %}
-		<p><a href="/">返回首页</a></p>
-    <!--<h6>{{JSON.stringify(error)}}</h6>-->
+		<p>您可以 <a href="/">返回首页</a>！</p>
     {% else %}
-        <p>您可以尝试 <a href="#">重新打开</a> 或者 <a href="/">返回首页</a></p>
+        <p>您可以 <a href="/">返回首页</a>！</p>
+        <p style="color: #fff; padding-top: 20px;">{{message}}</p>
+        <p style="color: #fff;">{{error}}</p>
 	{% endif %}
-
 </article>
+</body>
+</html>

@@ -9,20 +9,20 @@
 
 <script type="text/ecmascript-6">
 
-import Vue from 'vue'
-import Vuex from 'vuex';
-Vue.use(Vuex);
+//import Vue from 'vue'
+//import Vuex from 'vuex';
+//Vue.use(Vuex);
 
-const vuex_store = new Vuex.Store({
-	state:{
-	},
-	mutations:{
-	}
-});
+//const vuex_store = new Vuex.Store({
+//	state:{
+//	},
+//	mutations:{
+//	}
+//});
 
 export default {
 	name: 'app',
-	store: vuex_store,
+	// store: vuex_store,
 	created() {
 		console.info("app created");
 		console.info(this.$global.user);

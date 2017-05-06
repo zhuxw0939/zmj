@@ -118,10 +118,10 @@ export default {
 				console.info(data);
 				if(data.status==0){
 					data = data.data;
-					this.Toast({
-						message: '登录成功',
-						iconClass: 'icon icon-success'
-					});
+//					this.Toast({
+//						message: '登录成功',
+//						iconClass: 'icon icon-success'
+//					});
 
 					// 写入用户登录信息
 					this.$global.user = data;

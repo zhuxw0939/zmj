@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta http-equiv="Expires" content="0" />
+<title>找麻将 - 找你身边的微信麻将群</title>
+<meta name="keywords" content="找麻将 - 找你身边的微信麻将群" />
+<meta name="description" content="刚发现，原来我家周围有这么多打麻将的微信群！快来找找你家周围的麻将群吧！" />
+<style>
+[v-cloak]{
+	display: none;
+}
+body.loading .wrapper {
+	display: none;
+}
+.spinner {
+	display: none;
+}
+body.loading .spinner {
+	display: block;
+	font-size: 20px;
+	width: 1rem;
+	height: 1rem;
+	margin: 0 auto;
+	border-radius: 50%;
+	/*box-shadow: inset 0 0 0 .1rem rgba(58, 168, 237, .2);*/
+	box-shadow: inset 0 0 0 .05rem #fff7f4;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -0.5rem;
+	margin-left: -0.5rem;
+}
+.spinner i {
+	position: absolute;
+	clip: rect(0, 1rem, 1rem, .5rem);
+	width: 1rem;
+	height: 1rem;
+	animation: spinner-circle-clipper 1s ease-in-out infinite;
+}
+
+@keyframes spinner-circle-clipper {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}
+.spinner i:after {
+	position: absolute;
+	clip: rect(0, 1rem, 1rem, .5rem);
+	width: 1rem;
+	height: 1rem;
+	content: '';
+	animation: spinner-circle 1s ease-in-out infinite;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 .05rem #fc8048;
+}
+
+@keyframes spinner-circle {
+	0% {
+		transform: rotate(-180deg);
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}
+.outer {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+</style>
+<script type="text/javascript">
+	var dpr, rem, scale;
+	var docEl = document.documentElement;
+	var fontEl = document.createElement('style');
+	var metaEl = document.querySelector('meta[name="viewport"]');
+
+	dpr = window.devicePixelRatio || 1;
+	rem = docEl.clientWidth * dpr / 10;
+	scale = 1 / dpr;
+
+
+	// 设置viewport，进行缩放，达到高清效果
+	metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+
+	// 设置data-dpr属性，留作的css hack之用
+	docEl.setAttribute('data-dpr', dpr);
+
+	// 动态写入样式
+	docEl.firstElementChild.appendChild(fontEl);
+	fontEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
+
+	// 给js调用的，某一dpr下rem和px之间的转换函数
+	window.rem2px = function(v) {
+		v = parseFloat(v);
+		return v * rem;
+	};
+	window.px2rem = function(v) {
+		v = parseFloat(v);
+		return v / rem;
+	};
+
+	window.dpr = dpr;
+	window.rem = rem;
+
+	console.info("页面的dpr为："+dpr+" , 页面的rem为："+rem);
+</script>
+</head>
+<body>
+<img src="/img/aifx.png" class="outer">
+<p class="outer">找麻将 - 找你身边的微信麻将群</p>
+<p class="outer">刚发现，原来我家周围有这么多打麻将的微信群！快来找找你家周围的麻将群吧！</p>
+<div class="spinner_box"><div class="spinner"><i></i></div></div>
+<input id="js_userData" type="hidden" value="{{user|json}}" placeholder="user">
+<input id="js_webHost" type="hidden" value="{{webHost}}" placeholder="webHost">
+<input id="js_cookieUid" type="hidden" value="{{cookie_uid}}" placeholder="cookie_uid">
+<script type="text/javascript">
+	document.getElementsByTagName("body")[0].className = 'loading';
+</script>
+
+
+
+<div id="app"></div>
+<script src="{{build_host}}/home.build.js?v={{v}}"></script>
+
+
+<script>
+	$(function(){
+		$("body").removeClass("loading");
+	});
+</script>
+</body>
+</html>

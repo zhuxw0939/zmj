@@ -192,7 +192,7 @@
 
 		<!--选择游戏前切换厂牌省份-->
 		<mt-popup v-model="selectGamesCityVisible" popup-transition="popup-fade" position="bottom" style="width:100%">
-			<div class="picker_local_box">
+			<div class="picker_local_box picker_local_box_first">
 				<div class="picker_local_title">
 					<a href="javascript:void(0)" @click="selectGamesCityVisible=false">取消</a>
 					<a href="javascript:void(0)" style="color: #fcb648" class="goright" @click="onClickSelectGamesCitySure">确定</a>
@@ -304,7 +304,7 @@ export default {
 			// 选择游戏前切换厂牌城市
 			selectGamesCityVisible: false,
 			selectGamesCitySlots: [{
-				values: ['四川', '广东', '山东', '重庆', '河南', '陕西']
+				values: ['四川', '河南', '河北', '山东', '广东', '江苏']
 			}],
 			selectGamesCitySlotsChoice: '四川',
 			selectGamesCityValue: '四川',
@@ -618,7 +618,7 @@ export default {
 							lngData = JSON.parse(localStorage.location).point.x;
 						}
 						if(JSON.parse(localStorage.location).point.y){
-							lngData = JSON.parse(localStorage.location).point.y;
+							latData = JSON.parse(localStorage.location).point.y;
 						}
 					}
 					// 第零步 -- 发布招募信息-绑定游戏地区
@@ -677,7 +677,7 @@ export default {
 						lngData = JSON.parse(localStorage.location).point.x;
 					}
 					if(JSON.parse(localStorage.location).point.y){
-						lngData = JSON.parse(localStorage.location).point.y;
+						latData = JSON.parse(localStorage.location).point.y;
 					}
 				}
 				// 第零步 -- 发布招募信息-绑定游戏地区
@@ -1009,6 +1009,12 @@ export default {
 
 body
 	overflow-x hidden
+
+
+.picker_local_box_first .picker-item
+	color #999
+.picker_local_box_first .picker-selected
+	font-weight 600
 
 .page_step
 	.picker_local_box
